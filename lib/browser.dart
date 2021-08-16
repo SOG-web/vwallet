@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import './home.dart';
+import 'package:adobe_xd/page_link.dart';
+import './trades.dart';
+import './profile.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GooglePixel56 extends StatelessWidget {
-  GooglePixel56({
-    Key key,
+class Browser extends StatelessWidget {
+  Browser({
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -30,108 +34,126 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 37.0, start: 17.0),
-            Pin(size: 45.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 6.5, end: 6.4),
-                  Pin(size: 22.5, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_account_balance_…' (shape)
-                      SvgPicture.string(
-                    _svg_ou3db5,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Wallet',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 31.0, start: 17.0),
+            Pin(size: 46.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Home(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 24.1, end: 0.4),
+                    Pin(size: 22.5, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_account_balance_…' (shape)
+                        SvgPicture.string(
+                      _svg_ou3db5,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Wallet',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 41.0, middle: 0.3239),
-            Pin(size: 44.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 21.0, middle: 0.5353),
-                  Pin(size: 23.1, start: 0.0),
-                  child: Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, middle: 0.5),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_vj8xc5,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_vodbsd,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_oxe8,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Market',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 35.0, middle: 0.3184),
+            Pin(size: 45.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Trades(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 21.0, end: 3.3),
+                    Pin(size: 23.1, start: 0.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, middle: 0.5),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_vj8xc5,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, end: 0.0),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_vodbsd,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, start: 0.0),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_oxe8,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Market',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 42.0, middle: 0.6097),
-            Pin(size: 45.0, end: 21.0),
+            Pin(size: 40.0, middle: 0.6062),
+            Pin(size: 46.0, end: 20.0),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
-                  Pin(size: 22.6, middle: 0.5009),
+                  Pin(size: 22.6, middle: 0.5585),
                   Pin(size: 22.6, start: 0.0),
                   child:
                       // Adobe XD layer: 'ic_bubble_chart_24px' (group)
@@ -178,9 +200,9 @@ class GooglePixel56 extends StatelessWidget {
                 ),
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
+                  Pin(size: 16.0, end: 0.0),
                   child: Text(
-                    'Brower',
+                    'Browser',
                     style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontSize: 12,
@@ -194,36 +216,45 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 58.0, end: 19.0),
-            Pin(size: 46.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 23.0, middle: 0.513),
-                  Pin(size: 23.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_perm_identity_24…' (shape)
-                      SvgPicture.string(
-                    _svg_w45e8,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'My Profile',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 50.0, end: 27.0),
+            Pin(size: 47.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Profile(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 23.0, middle: 0.6649),
+                    Pin(size: 23.0, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_perm_identity_24…' (shape)
+                        SvgPicture.string(
+                      _svg_w45e8,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'My Profile',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
@@ -290,7 +321,7 @@ class GooglePixel56 extends StatelessWidget {
                 Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/b-logo.png'),
                   fit: BoxFit.fill,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.1), BlendMode.dstIn),
@@ -306,7 +337,7 @@ class GooglePixel56 extends StatelessWidget {
                 Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/e-logo.png'),
                   fit: BoxFit.fill,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.47), BlendMode.dstIn),
@@ -322,7 +353,7 @@ class GooglePixel56 extends StatelessWidget {
                 Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/t-logo.png'),
                   fit: BoxFit.fill,
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.1), BlendMode.dstIn),
@@ -331,8 +362,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 274.0, start: 21.0),
-            Pin(size: 46.0, start: 38.0),
+            Pin(size: 238.0, start: 21.0),
+            Pin(size: 52.0, start: 35.0),
             child: Text(
               'Ethereum\'s London upgrade\nWhat is EIP - 1559?',
               style: TextStyle(
@@ -355,8 +386,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 110.0, start: 36.0),
-            Pin(size: 24.0, start: 113.0),
+            Pin(size: 96.0, start: 36.0),
+            Pin(size: 27.0, start: 111.0),
             child: Text(
               'Learn More',
               style: TextStyle(
@@ -369,8 +400,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 250.0, start: 46.0),
-            Pin(size: 18.0, middle: 0.2365),
+            Pin(size: 214.0, start: 46.0),
+            Pin(size: 20.0, middle: 0.2359),
             child: Text(
               'Search for Dapp or input Dapp url',
               style: TextStyle(
@@ -432,8 +463,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 57.0, start: 30.0),
-            Pin(size: 18.0, middle: 0.3193),
+            Pin(size: 49.0, start: 30.0),
+            Pin(size: 20.0, middle: 0.3189),
             child: Text(
               'Favorite',
               style: TextStyle(
@@ -446,8 +477,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 64.0, middle: 0.3495),
-            Pin(size: 18.0, middle: 0.3193),
+            Pin(size: 52.0, middle: 0.3372),
+            Pin(size: 20.0, middle: 0.3189),
             child: Text(
               'Recently',
               style: TextStyle(
@@ -471,8 +502,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 149.0, middle: 0.3156),
-            Pin(size: 16.0, middle: 0.3904),
+            Pin(size: 128.0, middle: 0.2906),
+            Pin(size: 17.0, middle: 0.3897),
             child: Text(
               'How to collect a DApp?',
               style: TextStyle(
@@ -497,12 +528,12 @@ class GooglePixel56 extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(size: 20.0, end: 15.0),
-            Pin(size: 20.0, middle: 0.3502),
+            Pin(size: 21.0, middle: 0.3494),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
+                  Pin(start: 1.0, end: 0.0),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius:
@@ -514,8 +545,8 @@ class GooglePixel56 extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 7.0, middle: 0.4615),
-                  Pin(size: 16.0, start: 0.0),
+                  Pin(size: 5.0, middle: 0.4),
+                  Pin(size: 17.0, start: 0.0),
                   child: Text(
                     'x',
                     style: TextStyle(
@@ -531,8 +562,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 30.0, start: 19.0),
-            Pin(size: 18.0, middle: 0.4814),
+            Pin(size: 25.0, start: 19.0),
+            Pin(size: 20.0, middle: 0.4813),
             child: Text(
               'ETH',
               style: TextStyle(
@@ -545,8 +576,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 31.0, middle: 0.2099),
-            Pin(size: 18.0, middle: 0.4814),
+            Pin(size: 26.0, middle: 0.2071),
+            Pin(size: 20.0, middle: 0.4813),
             child: Text(
               'EOS',
               style: TextStyle(
@@ -559,8 +590,8 @@ class GooglePixel56 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 43.0, middle: 0.38),
-            Pin(size: 18.0, middle: 0.4814),
+            Pin(size: 38.0, middle: 0.3746),
+            Pin(size: 20.0, middle: 0.4813),
             child: Text(
               'TRON',
               style: TextStyle(
@@ -588,23 +619,23 @@ class GooglePixel56 extends StatelessWidget {
               child: SingleChildScrollView(
                 child: SizedBox(
                   width: 364.0,
-                  height: 1228.0,
+                  height: 1229.0,
                   child: Stack(
                     children: <Widget>[
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.4),
-                        Pin(size: 151.7, start: 33.0),
+                        Pin(size: 152.7, start: 32.0),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -613,7 +644,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -631,7 +662,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -640,7 +671,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -649,7 +680,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -658,7 +689,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -666,8 +697,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -679,8 +710,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -692,8 +723,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -705,8 +736,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -718,8 +749,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -731,8 +762,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -744,8 +775,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -757,8 +788,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -770,8 +801,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -783,8 +814,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -796,8 +827,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -809,8 +840,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -822,8 +853,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -835,8 +866,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -849,7 +880,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -860,7 +891,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -882,7 +913,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -893,7 +924,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -904,7 +935,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -915,7 +946,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -925,8 +956,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -938,8 +969,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -951,8 +982,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -964,8 +995,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -1006,18 +1037,18 @@ class GooglePixel56 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(start: 0.4, end: 0.0),
-                        Pin(size: 151.7, end: -69.7),
+                        Pin(size: 152.7, end: -69.7),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -1026,7 +1057,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -1044,7 +1075,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -1053,7 +1084,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -1062,7 +1093,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -1071,7 +1102,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -1079,8 +1110,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -1092,8 +1123,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -1105,8 +1136,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -1118,8 +1149,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -1131,8 +1162,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -1144,8 +1175,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -1157,8 +1188,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -1170,8 +1201,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -1183,8 +1214,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -1196,8 +1227,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -1209,8 +1240,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -1222,8 +1253,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -1235,8 +1266,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -1248,8 +1279,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -1262,7 +1293,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1273,7 +1304,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1295,7 +1326,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1306,7 +1337,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1317,7 +1348,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1328,7 +1359,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1338,8 +1369,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -1351,8 +1382,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -1364,8 +1395,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -1377,8 +1408,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -1418,8 +1449,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 140.0, start: 2.0),
-                        Pin(size: 21.0, start: 0.0),
+                        Pin(size: 120.0, start: 2.0),
+                        Pin(size: 24.0, start: -1.0),
                         child: Text(
                           'Recommended',
                           style: TextStyle(
@@ -1431,8 +1462,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 88.0, start: 2.0),
-                        Pin(size: 21.0, middle: 0.6695),
+                        Pin(size: 75.0, start: 2.0),
+                        Pin(size: 24.0, middle: 0.673),
                         child: Text(
                           'Exchange',
                           style: TextStyle(
@@ -1454,18 +1485,18 @@ class GooglePixel56 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(start: 0.4, end: 0.0),
-                        Pin(size: 151.7, end: -273.7),
+                        Pin(size: 152.7, end: -273.7),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -1474,7 +1505,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -1492,7 +1523,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -1501,7 +1532,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -1510,7 +1541,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -1519,7 +1550,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -1527,8 +1558,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -1540,8 +1571,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -1553,8 +1584,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -1566,8 +1597,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -1579,8 +1610,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -1592,8 +1623,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -1605,8 +1636,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -1618,8 +1649,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -1631,8 +1662,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -1644,8 +1675,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -1657,8 +1688,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -1670,8 +1701,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -1683,8 +1714,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -1696,8 +1727,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -1710,7 +1741,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1721,7 +1752,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1743,7 +1774,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1754,7 +1785,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1765,7 +1796,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1776,7 +1807,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -1786,8 +1817,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -1799,8 +1830,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -1812,8 +1843,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -1825,8 +1856,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -1867,18 +1898,18 @@ class GooglePixel56 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(start: 0.4, end: 0.0),
-                        Pin(size: 151.7, end: -493.7),
+                        Pin(size: 152.7, end: -493.7),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -1887,7 +1918,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -1905,7 +1936,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -1914,7 +1945,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -1923,7 +1954,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -1932,7 +1963,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -1940,8 +1971,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -1953,8 +1984,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -1966,8 +1997,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -1979,8 +2010,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -1992,8 +2023,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2005,8 +2036,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2018,8 +2049,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2031,8 +2062,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2044,8 +2075,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -2057,8 +2088,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -2070,8 +2101,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2083,8 +2114,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2096,8 +2127,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2109,8 +2140,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2123,7 +2154,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2134,7 +2165,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2156,7 +2187,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2167,7 +2198,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2178,7 +2209,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2189,7 +2220,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2199,8 +2230,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -2212,8 +2243,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -2225,8 +2256,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -2238,8 +2269,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -2280,18 +2311,18 @@ class GooglePixel56 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(start: 0.4, end: 0.0),
-                        Pin(size: 151.7, end: -707.4),
+                        Pin(size: 152.7, end: -707.4),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -2300,7 +2331,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -2318,7 +2349,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -2327,7 +2358,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -2336,7 +2367,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -2345,7 +2376,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -2353,8 +2384,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -2366,8 +2397,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -2379,8 +2410,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -2392,8 +2423,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -2405,8 +2436,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2418,8 +2449,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2431,8 +2462,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2444,8 +2475,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2457,8 +2488,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -2470,8 +2501,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -2483,8 +2514,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2496,8 +2527,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2509,8 +2540,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2522,8 +2553,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2536,7 +2567,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2547,7 +2578,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2569,7 +2600,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2580,7 +2611,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2591,7 +2622,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2602,7 +2633,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2612,8 +2643,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -2625,8 +2656,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -2638,8 +2669,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -2651,8 +2682,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -2693,18 +2724,18 @@ class GooglePixel56 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(start: 0.4, end: 0.0),
-                        Pin(size: 151.7, end: -912.7),
+                        Pin(size: 152.7, end: -912.7),
                         child: Scrollbar(
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SizedBox(
                               width: 1039.0,
-                              height: 152.0,
+                              height: 153.0,
                               child: Stack(
                                 children: <Widget>[
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.2345),
+                                    Pin(size: 1.0, middle: 0.2396),
                                     child: SvgPicture.string(
                                       _svg_v6kjvx,
                                       allowDrawingOutsideViewBox: true,
@@ -2713,7 +2744,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, start: -52.0),
-                                    Pin(size: 1.0, middle: 0.6206),
+                                    Pin(size: 1.0, middle: 0.6231),
                                     child: SvgPicture.string(
                                       _svg_igyle4,
                                       allowDrawingOutsideViewBox: true,
@@ -2731,7 +2762,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.2332),
+                                    Pin(size: 1.0, middle: 0.2383),
                                     child: SvgPicture.string(
                                       _svg_bzpn5j,
                                       allowDrawingOutsideViewBox: true,
@@ -2740,7 +2771,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.2342),
+                                    Pin(size: 1.0, middle: 0.2392),
                                     child: SvgPicture.string(
                                       _svg_am5o1u,
                                       allowDrawingOutsideViewBox: true,
@@ -2749,7 +2780,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -267.0),
-                                    Pin(size: 1.0, middle: 0.6193),
+                                    Pin(size: 1.0, middle: 0.6218),
                                     child: SvgPicture.string(
                                       _svg_w44cs9,
                                       allowDrawingOutsideViewBox: true,
@@ -2758,7 +2789,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 332.8, end: -624.0),
-                                    Pin(size: 1.0, middle: 0.6202),
+                                    Pin(size: 1.0, middle: 0.6227),
                                     child: SvgPicture.string(
                                       _svg_j6wqk5,
                                       allowDrawingOutsideViewBox: true,
@@ -2766,8 +2797,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 28.0, start: 57.0),
-                                    Pin(size: 16.0, start: 1.0),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, start: 1.0),
                                     child: Text(
                                       'LON',
                                       style: TextStyle(
@@ -2779,8 +2810,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 96.0, start: 57.0),
-                                    Pin(size: 8.0, start: 22.0),
+                                    Pin(size: 84.0, start: 57.0),
+                                    Pin(size: 10.0, start: 22.0),
                                     child: Text(
                                       'Stake Lon and Earn Reward',
                                       style: TextStyle(
@@ -2792,8 +2823,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 27.0, start: 57.0),
-                                    Pin(size: 16.0, middle: 0.4361),
+                                    Pin(size: 25.0, start: 57.0),
+                                    Pin(size: 17.0, middle: 0.4361),
                                     child: Text(
                                       'GTO',
                                       style: TextStyle(
@@ -2805,8 +2836,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 91.0, start: 57.0),
-                                    Pin(size: 16.0, end: 19.1),
+                                    Pin(size: 81.0, start: 57.0),
+                                    Pin(size: 17.0, end: 19.1),
                                     child: Text(
                                       'ATOM Staking',
                                       style: TextStyle(
@@ -2818,8 +2849,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -36.1),
-                                    Pin(size: 16.0, start: 0.0),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, start: 0.0),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2831,8 +2862,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 31.0, end: -393.1),
-                                    Pin(size: 16.0, start: 0.1),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, start: 0.1),
                                     child: Text(
                                       'Aave',
                                       style: TextStyle(
@@ -2844,8 +2875,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -78.1),
-                                    Pin(size: 16.0, middle: 0.4287),
+                                    Pin(size: 64.0, end: -69.1),
+                                    Pin(size: 17.0, middle: 0.4287),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2857,8 +2888,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 73.0, end: -435.1),
-                                    Pin(size: 16.0, middle: 0.4298),
+                                    Pin(size: 64.0, end: -426.1),
+                                    Pin(size: 17.0, middle: 0.4298),
                                     child: Text(
                                       'Compound',
                                       style: TextStyle(
@@ -2870,8 +2901,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 104.0, start: 57.0),
-                                    Pin(size: 10.0, middle: 0.5602),
+                                    Pin(size: 91.0, start: 57.0),
+                                    Pin(size: 11.0, middle: 0.5602),
                                     child: Text(
                                       'Support imBTC and WBTC',
                                       style: TextStyle(
@@ -2883,8 +2914,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 30.0, start: 57.0),
-                                    Pin(size: 10.0, end: 4.1),
+                                    Pin(size: 26.0, start: 57.0),
+                                    Pin(size: 11.0, end: 4.1),
                                     child: Text(
                                       'Staking',
                                       style: TextStyle(
@@ -2896,8 +2927,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -81.1),
-                                    Pin(size: 8.0, start: 21.0),
+                                    Pin(size: 73.0, end: -78.1),
+                                    Pin(size: 10.0, start: 21.0),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2909,8 +2940,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 76.0, end: -438.1),
-                                    Pin(size: 8.0, start: 21.1),
+                                    Pin(size: 73.0, end: -435.1),
+                                    Pin(size: 10.0, start: 21.1),
                                     child: Text(
                                       'TUSD, USDT & 15 More',
                                       style: TextStyle(
@@ -2922,8 +2953,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -108.1),
-                                    Pin(size: 10.0, middle: 0.5532),
+                                    Pin(size: 95.0, end: -100.1),
+                                    Pin(size: 11.0, middle: 0.5532),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2935,8 +2966,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 103.0, end: -465.1),
-                                    Pin(size: 10.0, middle: 0.5541),
+                                    Pin(size: 95.0, end: -457.1),
+                                    Pin(size: 11.0, middle: 0.5541),
                                     child: Text(
                                       'USDT, USDC, Dai & 6 more',
                                       style: TextStyle(
@@ -2949,7 +2980,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, start: 5.0),
+                                    Pin(size: 18.6, start: 6.0),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2960,7 +2991,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, start: 23.8),
-                                    Pin(size: 18.6, middle: 0.4689),
+                                    Pin(size: 18.6, middle: 0.4728),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2982,7 +3013,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, middle: 0.4431),
+                                    Pin(size: 18.6, middle: 0.4473),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -2993,7 +3024,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, middle: 0.4442),
+                                    Pin(size: 18.6, middle: 0.4483),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -3004,7 +3035,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, middle: 0.9727),
-                                    Pin(size: 18.6, start: 2.4),
+                                    Pin(size: 18.6, start: 3.4),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -3015,7 +3046,7 @@ class GooglePixel56 extends StatelessWidget {
                                   ),
                                   Pinned.fromPins(
                                     Pin(size: 18.6, end: -347.6),
-                                    Pin(size: 18.6, start: 2.6),
+                                    Pin(size: 18.6, start: 3.6),
                                     child:
                                         // Adobe XD layer: 'tether' (shape)
                                         Container(
@@ -3025,8 +3056,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -107.1),
-                                    Pin(size: 10.0, end: 5.1),
+                                    Pin(size: 93.0, end: -98.1),
+                                    Pin(size: 11.0, end: 5.1),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -3038,8 +3069,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 102.0, end: -464.1),
-                                    Pin(size: 10.0, end: 5.0),
+                                    Pin(size: 93.0, end: -455.1),
+                                    Pin(size: 11.0, end: 5.0),
                                     child: Text(
                                       'Lending & Margin Trading',
                                       style: TextStyle(
@@ -3051,8 +3082,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -37.1),
-                                    Pin(size: 16.0, end: 20.1),
+                                    Pin(size: 28.0, end: -33.1),
+                                    Pin(size: 17.0, end: 20.1),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -3064,8 +3095,8 @@ class GooglePixel56 extends StatelessWidget {
                                     ),
                                   ),
                                   Pinned.fromPins(
-                                    Pin(size: 32.0, end: -394.1),
-                                    Pin(size: 16.0, end: 20.0),
+                                    Pin(size: 28.0, end: -390.1),
+                                    Pin(size: 17.0, end: 20.0),
                                     child: Text(
                                       'dydx',
                                       style: TextStyle(
@@ -3105,8 +3136,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 35.0, start: 2.0),
-                        Pin(size: 21.0, end: -115.7),
+                        Pin(size: 32.0, start: 2.0),
+                        Pin(size: 24.0, end: -117.7),
                         child: Text(
                           'NFT',
                           style: TextStyle(
@@ -3118,8 +3149,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 46.0, start: 4.0),
-                        Pin(size: 21.0, end: -319.7),
+                        Pin(size: 41.0, start: 4.0),
+                        Pin(size: 24.0, end: -321.7),
                         child: Text(
                           'Heco',
                           style: TextStyle(
@@ -3131,8 +3162,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 47.0, start: 2.0),
-                        Pin(size: 21.0, end: -531.7),
+                        Pin(size: 42.0, start: 2.0),
+                        Pin(size: 24.0, end: -533.7),
                         child: Text(
                           'Layer',
                           style: TextStyle(
@@ -3144,8 +3175,8 @@ class GooglePixel56 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 31.0, start: 2.0),
-                        Pin(size: 21.0, end: -744.7),
+                        Pin(size: 26.0, start: 2.0),
+                        Pin(size: 24.0, end: -746.7),
                         child: Text(
                           'Bsc',
                           style: TextStyle(

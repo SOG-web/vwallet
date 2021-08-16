@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './GooglePixel53.dart';
+import './trades.dart';
 import 'package:adobe_xd/page_link.dart';
-import './GooglePixel54.dart';
-import './GooglePixel52.dart';
+import './de_fi.dart';
+import './home.dart';
+import './browser.dart';
+import './profile.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GooglePixel55 extends StatelessWidget {
-  GooglePixel55({
-    Key key,
+class Markets extends StatelessWidget {
+  Markets({
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class GooglePixel55 extends StatelessWidget {
                 PageLinkInfo(
                   ease: Curves.easeIn,
                   duration: 0.8,
-                  pageBuilder: () => GooglePixel53(),
+                  pageBuilder: () => Trades(),
                 ),
               ],
               child: Text(
@@ -61,7 +63,7 @@ class GooglePixel55 extends StatelessWidget {
                 PageLinkInfo(
                   ease: Curves.easeIn,
                   duration: 0.8,
-                  pageBuilder: () => GooglePixel54(),
+                  pageBuilder: () => DeFi(),
                 ),
               ],
               child: Text(
@@ -113,8 +115,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 56.0, start: 13.0),
-            Pin(size: 14.0, start: 95.0),
+            Pin(size: 48.0, start: 13.0),
+            Pin(size: 16.0, start: 94.0),
             child: Text(
               'Watchlist',
               style: TextStyle(
@@ -126,8 +128,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 78.0, middle: 0.3397),
-            Pin(size: 14.0, start: 95.0),
+            Pin(size: 69.0, middle: 0.3302),
+            Pin(size: 16.0, start: 94.0),
             child: Text(
               'Market Value',
               style: TextStyle(
@@ -139,8 +141,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 52.0, start: 15.0),
-            Pin(size: 10.0, start: 144.0),
+            Pin(size: 46.0, start: 15.0),
+            Pin(size: 11.0, start: 143.0),
             child: Text(
               'Market Value',
               style: TextStyle(
@@ -152,8 +154,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 20.0, middle: 0.5737),
-            Pin(size: 10.0, start: 144.0),
+            Pin(size: 17.0, middle: 0.5691),
+            Pin(size: 11.0, start: 143.0),
             child: Text(
               'Price',
               style: TextStyle(
@@ -165,8 +167,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 31.0, end: 37.0),
-            Pin(size: 10.0, start: 144.0),
+            Pin(size: 27.0, end: 41.0),
+            Pin(size: 11.0, start: 143.0),
             child: Text(
               'Change',
               style: TextStyle(
@@ -178,8 +180,8 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 24.0, middle: 0.6043),
-            Pin(size: 14.0, start: 95.0),
+            Pin(size: 21.0, middle: 0.5995),
+            Pin(size: 16.0, start: 94.0),
             child: Text(
               'Defi',
               style: TextStyle(
@@ -284,12 +286,12 @@ class GooglePixel55 extends StatelessWidget {
               child: SingleChildScrollView(
                 child: SizedBox(
                   width: 418.0,
-                  height: 1089.0,
+                  height: 1090.0,
                   child: Stack(
                     children: <Widget>[
                       Pinned.fromPins(
-                        Pin(size: 29.0, start: 27.5),
-                        Pin(size: 18.0, start: 0.0),
+                        Pin(size: 24.0, start: 27.5),
+                        Pin(size: 20.0, start: -1.0),
                         child: Text(
                           'BTC',
                           style: TextStyle(
@@ -301,8 +303,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 29.0, start: 29.5),
-                        Pin(size: 18.0, middle: 0.6703),
+                        Pin(size: 24.0, start: 29.5),
+                        Pin(size: 20.0, middle: 0.6709),
                         child: Text(
                           'BTC',
                           style: TextStyle(
@@ -314,8 +316,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 47.0, start: 27.5),
-                        Pin(size: 10.0, start: 23.0),
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 11.0, start: 22.0),
                         child: Text(
                           '#1 \$827.41 B',
                           style: TextStyle(
@@ -327,13 +329,91 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 47.0, start: 29.5),
-                        Pin(size: 10.0, middle: 0.7018),
+                        Pin(size: 46.0, start: 29.5),
+                        Pin(size: 11.0, middle: 0.7013),
                         child: Text(
                           '#1 \$827.41 B',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 8,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 26.0, start: 27.5),
+                        Pin(size: 20.0, start: 62.0),
+                        child: Text(
+                          'ETH',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 26.0, start: 29.5),
+                        Pin(size: 20.0, middle: 0.7856),
+                        child: Text(
+                          'ETH',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 36.0, start: 27.5),
+                        Pin(size: 20.0, middle: 0.2258),
+                        child: Text(
+                          'USDT',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 36.0, start: 29.5),
+                        Pin(size: 20.0, end: 55.8),
+                        child: Text(
+                          'USDT',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 28.0, start: 27.5),
+                        Pin(size: 20.0, middle: 0.3386),
+                        child: Text(
+                          'BNB',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 28.0, start: 29.5),
+                        Pin(size: 20.0, end: -6.2),
+                        child: Text(
+                          'BNB',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 15,
                             color: const Color(0xff484848),
                           ),
                           textAlign: TextAlign.left,
@@ -341,9 +421,9 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 30.0, start: 27.5),
-                        Pin(size: 18.0, start: 63.0),
+                        Pin(size: 20.0, middle: 0.4533),
                         child: Text(
-                          'ETH',
+                          'ADA',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 15,
@@ -354,72 +434,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 30.0, start: 29.5),
-                        Pin(size: 18.0, middle: 0.7846),
-                        child: Text(
-                          'ETH',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 41.0, start: 27.5),
-                        Pin(size: 18.0, middle: 0.2268),
-                        child: Text(
-                          'USDT',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 41.0, start: 29.5),
-                        Pin(size: 18.0, end: 56.8),
-                        child: Text(
-                          'USDT',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 33.0, start: 27.5),
-                        Pin(size: 18.0, middle: 0.3392),
-                        child: Text(
-                          'BNB',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 33.0, start: 29.5),
-                        Pin(size: 18.0, end: -5.2),
-                        child: Text(
-                          'BNB',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 33.0, start: 27.5),
-                        Pin(size: 18.0, middle: 0.4535),
+                        Pin(size: 20.0, end: -69.2),
                         child: Text(
                           'ADA',
                           style: TextStyle(
@@ -431,21 +446,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 33.0, start: 29.5),
-                        Pin(size: 18.0, end: -68.2),
-                        child: Text(
-                          'ADA',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 15,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 31.0, start: 27.5),
-                        Pin(size: 18.0, middle: 0.566),
+                        Pin(size: 26.0, start: 27.5),
+                        Pin(size: 20.0, middle: 0.5662),
                         child: Text(
                           'XRP',
                           style: TextStyle(
@@ -457,8 +459,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 56.0, start: 27.5),
-                        Pin(size: 11.0, start: 85.0),
+                        Pin(size: 51.0, start: 27.5),
+                        Pin(size: 12.0, start: 84.0),
                         child: Text(
                           '#2 \$355.78 B',
                           style: TextStyle(
@@ -470,10 +472,88 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 56.0, start: 29.5),
-                        Pin(size: 11.0, middle: 0.8142),
+                        Pin(size: 51.0, start: 29.5),
+                        Pin(size: 12.0, middle: 0.8138),
                         child: Text(
                           '#2 \$355.78 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 9,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 12.0, middle: 0.2638),
+                        child: Text(
+                          '#3 \$62.17 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 9,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 46.0, start: 29.5),
+                        Pin(size: 12.0, end: 40.8),
+                        child: Text(
+                          '#3 \$62.17 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 9,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 41.0, start: 27.5),
+                        Pin(size: 11.0, middle: 0.3744),
+                        child: Text(
+                          '#4 \$57.79 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 8,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 41.0, start: 29.5),
+                        Pin(size: 11.0, end: -20.2),
+                        child: Text(
+                          '#4 \$57.79 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 8,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 12.0, middle: 0.4863),
+                        child: Text(
+                          '#5 \$46.09 B',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 9,
+                            color: const Color(0xff484848),
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Pinned.fromPins(
+                        Pin(size: 46.0, start: 29.5),
+                        Pin(size: 12.0, end: -83.2),
+                        child: Text(
+                          '#5 \$46.09 B',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 9,
@@ -484,85 +564,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 49.0, start: 27.5),
-                        Pin(size: 11.0, middle: 0.2651),
-                        child: Text(
-                          '#3 \$62.17 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 9,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 49.0, start: 29.5),
-                        Pin(size: 11.0, end: 40.8),
-                        child: Text(
-                          '#3 \$62.17 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 9,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 45.0, start: 27.5),
-                        Pin(size: 10.0, middle: 0.3755),
-                        child: Text(
-                          '#4 \$57.79 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 8,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 45.0, start: 29.5),
-                        Pin(size: 10.0, end: -20.2),
-                        child: Text(
-                          '#4 \$57.79 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 8,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 53.0, start: 27.5),
-                        Pin(size: 11.0, middle: 0.4872),
-                        child: Text(
-                          '#5 \$46.09 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 9,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 53.0, start: 29.5),
-                        Pin(size: 11.0, end: -83.2),
-                        child: Text(
-                          '#5 \$46.09 B',
-                          style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 9,
-                            color: const Color(0xff484848),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 54.0, start: 27.5),
-                        Pin(size: 11.0, middle: 0.5983),
+                        Pin(size: 12.0, middle: 0.5976),
                         child: Text(
                           '#6 \$36. 67 B',
                           style: TextStyle(
@@ -575,7 +577,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 43.0, end: 34.5),
-                        Pin(size: 17.0, start: 1.0),
+                        Pin(size: 19.0, start: 0.0),
                         child: Text(
                           '-1.43%',
                           style: TextStyle(
@@ -588,7 +590,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 43.0, end: 32.5),
-                        Pin(size: 17.0, middle: 0.6709),
+                        Pin(size: 19.0, middle: 0.6715),
                         child: Text(
                           '-1.43%',
                           style: TextStyle(
@@ -600,8 +602,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 53.0, end: 29.5),
-                        Pin(size: 17.0, middle: 0.574),
+                        Pin(size: 54.0, end: 28.5),
+                        Pin(size: 19.0, middle: 0.5743),
                         child: Text(
                           '+13.43%',
                           style: TextStyle(
@@ -614,7 +616,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 36.5),
-                        Pin(size: 17.0, middle: 0.4599),
+                        Pin(size: 19.0, middle: 0.4598),
                         child: Text(
                           '+3.3%',
                           style: TextStyle(
@@ -627,7 +629,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 34.5),
-                        Pin(size: 17.0, end: -71.2),
+                        Pin(size: 19.0, end: -72.2),
                         child: Text(
                           '+3.3%',
                           style: TextStyle(
@@ -639,8 +641,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 49.0, end: 31.5),
-                        Pin(size: 17.0, middle: 0.3459),
+                        Pin(size: 47.0, end: 33.5),
+                        Pin(size: 19.0, middle: 0.3453),
                         child: Text(
                           '+0.53%',
                           style: TextStyle(
@@ -652,8 +654,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 49.0, end: 29.5),
-                        Pin(size: 17.0, end: -8.2),
+                        Pin(size: 47.0, end: 31.5),
+                        Pin(size: 19.0, end: -9.2),
                         child: Text(
                           '+0.53%',
                           style: TextStyle(
@@ -666,7 +668,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 36.5),
-                        Pin(size: 17.0, middle: 0.23),
+                        Pin(size: 19.0, middle: 0.229),
                         child: Text(
                           '+5.3%',
                           style: TextStyle(
@@ -679,7 +681,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 34.5),
-                        Pin(size: 17.0, end: 55.8),
+                        Pin(size: 19.0, end: 54.8),
                         child: Text(
                           '+5.3%',
                           style: TextStyle(
@@ -691,8 +693,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 45.0, end: 33.5),
-                        Pin(size: 17.0, start: 64.0),
+                        Pin(size: 43.0, end: 35.5),
+                        Pin(size: 19.0, start: 63.0),
                         child: Text(
                           '-3.43%',
                           style: TextStyle(
@@ -704,8 +706,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 45.0, end: 31.5),
-                        Pin(size: 17.0, middle: 0.785),
+                        Pin(size: 43.0, end: 33.5),
+                        Pin(size: 19.0, middle: 0.786),
                         child: Text(
                           '-3.43%',
                           style: TextStyle(
@@ -717,8 +719,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 76.0, middle: 0.6155),
-                        Pin(size: 18.0, start: 0.0),
+                        Pin(size: 71.0, middle: 0.6066),
+                        Pin(size: 20.0, start: -1.0),
                         child: Text(
                           '\$46,991.87',
                           style: TextStyle(
@@ -730,8 +732,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 76.0, middle: 0.6213),
-                        Pin(size: 18.0, middle: 0.6703),
+                        Pin(size: 71.0, middle: 0.6124),
+                        Pin(size: 20.0, middle: 0.6709),
                         child: Text(
                           '\$46,991.87',
                           style: TextStyle(
@@ -743,8 +745,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 65.0, middle: 0.6133),
-                        Pin(size: 18.0, start: 63.0),
+                        Pin(size: 63.0, middle: 0.6099),
+                        Pin(size: 20.0, start: 62.0),
                         child: Text(
                           '\$3,255.61',
                           style: TextStyle(
@@ -756,8 +758,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 65.0, middle: 0.619),
-                        Pin(size: 18.0, middle: 0.7846),
+                        Pin(size: 63.0, middle: 0.6155),
+                        Pin(size: 20.0, middle: 0.7856),
                         child: Text(
                           '\$3,255.61',
                           style: TextStyle(
@@ -769,8 +771,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 74.0, middle: 0.6148),
-                        Pin(size: 18.0, middle: 0.2304),
+                        Pin(size: 68.0, middle: 0.6043),
+                        Pin(size: 20.0, middle: 0.2294),
                         child: Text(
                           '\$0.999912',
                           style: TextStyle(
@@ -782,8 +784,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 74.0, middle: 0.6206),
-                        Pin(size: 18.0, end: 54.8),
+                        Pin(size: 68.0, middle: 0.61),
+                        Pin(size: 20.0, end: 53.8),
                         child: Text(
                           '\$0.999912',
                           style: TextStyle(
@@ -795,8 +797,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 59.0, middle: 0.6114),
-                        Pin(size: 18.0, middle: 0.3447),
+                        Pin(size: 52.0, middle: 0.5997),
+                        Pin(size: 20.0, middle: 0.3441),
                         child: Text(
                           '\$406.64',
                           style: TextStyle(
@@ -808,8 +810,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 59.0, middle: 0.617),
-                        Pin(size: 18.0, end: -8.2),
+                        Pin(size: 52.0, middle: 0.6052),
+                        Pin(size: 20.0, end: -9.2),
                         child: Text(
                           '\$406.64',
                           style: TextStyle(
@@ -822,7 +824,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 36.0, middle: 0.6034),
-                        Pin(size: 18.0, middle: 0.4608),
+                        Pin(size: 20.0, middle: 0.4606),
                         child: Text(
                           '\$2.19',
                           style: TextStyle(
@@ -835,7 +837,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 36.0, middle: 0.6086),
-                        Pin(size: 18.0, end: -72.2),
+                        Pin(size: 20.0, end: -73.2),
                         child: Text(
                           '\$2.19',
                           style: TextStyle(
@@ -847,8 +849,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 77.0, middle: 0.6173),
-                        Pin(size: 18.0, middle: 0.5751),
+                        Pin(size: 68.0, middle: 0.6014),
+                        Pin(size: 20.0, middle: 0.5753),
                         child: Text(
                           '\$0.288875',
                           style: TextStyle(
@@ -950,8 +952,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 31.0, start: 29.5),
-                        Pin(size: 18.0, end: -130.2),
+                        Pin(size: 26.0, start: 29.5),
+                        Pin(size: 20.0, end: -131.2),
                         child: Text(
                           'XRP',
                           style: TextStyle(
@@ -963,8 +965,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 31.0, start: 27.5),
-                        Pin(size: 18.0, end: -499.7),
+                        Pin(size: 26.0, start: 27.5),
+                        Pin(size: 20.0, end: -500.7),
                         child: Text(
                           'XRP',
                           style: TextStyle(
@@ -976,8 +978,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 54.0, start: 29.5),
-                        Pin(size: 11.0, end: -145.2),
+                        Pin(size: 49.0, start: 29.5),
+                        Pin(size: 12.0, end: -145.2),
                         child: Text(
                           '#6 \$36. 67 B',
                           style: TextStyle(
@@ -989,8 +991,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 54.0, start: 27.5),
-                        Pin(size: 11.0, end: -514.7),
+                        Pin(size: 49.0, start: 27.5),
+                        Pin(size: 12.0, end: -514.7),
                         child: Text(
                           '#6 \$36. 67 B',
                           style: TextStyle(
@@ -1002,8 +1004,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 53.0, end: 27.5),
-                        Pin(size: 17.0, end: -134.2),
+                        Pin(size: 54.0, end: 26.5),
+                        Pin(size: 19.0, end: -135.2),
                         child: Text(
                           '+13.43%',
                           style: TextStyle(
@@ -1015,8 +1017,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 53.0, end: 29.5),
-                        Pin(size: 17.0, end: -503.7),
+                        Pin(size: 54.0, end: 28.5),
+                        Pin(size: 19.0, end: -504.7),
                         child: Text(
                           '+13.43%',
                           style: TextStyle(
@@ -1028,8 +1030,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 77.0, middle: 0.6232),
-                        Pin(size: 18.0, end: -135.2),
+                        Pin(size: 68.0, middle: 0.6071),
+                        Pin(size: 20.0, end: -136.2),
                         child: Text(
                           '\$0.288875',
                           style: TextStyle(
@@ -1041,8 +1043,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 77.0, middle: 0.6173),
-                        Pin(size: 18.0, end: -504.7),
+                        Pin(size: 68.0, middle: 0.6014),
+                        Pin(size: 20.0, end: -505.7),
                         child: Text(
                           '\$0.288875',
                           style: TextStyle(
@@ -1090,8 +1092,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 29.0, start: 27.5),
-                        Pin(size: 18.0, end: -187.7),
+                        Pin(size: 24.0, start: 27.5),
+                        Pin(size: 20.0, end: -188.7),
                         child: Text(
                           'BTC',
                           style: TextStyle(
@@ -1103,8 +1105,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 47.0, start: 27.5),
-                        Pin(size: 10.0, end: -202.7),
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 11.0, end: -202.7),
                         child: Text(
                           '#1 \$827.41 B',
                           style: TextStyle(
@@ -1116,8 +1118,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 30.0, start: 27.5),
-                        Pin(size: 18.0, end: -250.7),
+                        Pin(size: 26.0, start: 27.5),
+                        Pin(size: 20.0, end: -251.7),
                         child: Text(
                           'ETH',
                           style: TextStyle(
@@ -1129,8 +1131,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 41.0, start: 27.5),
-                        Pin(size: 18.0, end: -312.7),
+                        Pin(size: 36.0, start: 27.5),
+                        Pin(size: 20.0, end: -313.7),
                         child: Text(
                           'USDT',
                           style: TextStyle(
@@ -1142,8 +1144,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 33.0, start: 27.5),
-                        Pin(size: 18.0, end: -374.7),
+                        Pin(size: 28.0, start: 27.5),
+                        Pin(size: 20.0, end: -375.7),
                         child: Text(
                           'BNB',
                           style: TextStyle(
@@ -1155,8 +1157,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 33.0, start: 27.5),
-                        Pin(size: 18.0, end: -437.7),
+                        Pin(size: 30.0, start: 27.5),
+                        Pin(size: 20.0, end: -438.7),
                         child: Text(
                           'ADA',
                           style: TextStyle(
@@ -1168,8 +1170,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 56.0, start: 27.5),
-                        Pin(size: 11.0, end: -265.7),
+                        Pin(size: 51.0, start: 27.5),
+                        Pin(size: 12.0, end: -265.7),
                         child: Text(
                           '#2 \$355.78 B',
                           style: TextStyle(
@@ -1181,8 +1183,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 49.0, start: 27.5),
-                        Pin(size: 11.0, end: -328.7),
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 12.0, end: -328.7),
                         child: Text(
                           '#3 \$62.17 B',
                           style: TextStyle(
@@ -1194,8 +1196,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 45.0, start: 27.5),
-                        Pin(size: 10.0, end: -389.7),
+                        Pin(size: 41.0, start: 27.5),
+                        Pin(size: 11.0, end: -389.7),
                         child: Text(
                           '#4 \$57.79 B',
                           style: TextStyle(
@@ -1207,8 +1209,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 53.0, start: 27.5),
-                        Pin(size: 11.0, end: -452.7),
+                        Pin(size: 46.0, start: 27.5),
+                        Pin(size: 12.0, end: -452.7),
                         child: Text(
                           '#5 \$46.09 B',
                           style: TextStyle(
@@ -1221,7 +1223,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 43.0, end: 34.5),
-                        Pin(size: 17.0, end: -187.7),
+                        Pin(size: 19.0, end: -188.7),
                         child: Text(
                           '-1.43%',
                           style: TextStyle(
@@ -1234,7 +1236,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 36.5),
-                        Pin(size: 17.0, end: -440.7),
+                        Pin(size: 19.0, end: -441.7),
                         child: Text(
                           '+3.3%',
                           style: TextStyle(
@@ -1246,8 +1248,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 49.0, end: 31.5),
-                        Pin(size: 17.0, end: -377.7),
+                        Pin(size: 47.0, end: 33.5),
+                        Pin(size: 19.0, end: -378.7),
                         child: Text(
                           '+0.53%',
                           style: TextStyle(
@@ -1260,7 +1262,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 39.0, end: 36.5),
-                        Pin(size: 17.0, end: -313.7),
+                        Pin(size: 19.0, end: -314.7),
                         child: Text(
                           '+5.3%',
                           style: TextStyle(
@@ -1272,8 +1274,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 45.0, end: 33.5),
-                        Pin(size: 17.0, end: -250.7),
+                        Pin(size: 43.0, end: 35.5),
+                        Pin(size: 19.0, end: -251.7),
                         child: Text(
                           '-3.43%',
                           style: TextStyle(
@@ -1285,8 +1287,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 76.0, middle: 0.6155),
-                        Pin(size: 18.0, end: -187.7),
+                        Pin(size: 71.0, middle: 0.6066),
+                        Pin(size: 20.0, end: -188.7),
                         child: Text(
                           '\$46,991.87',
                           style: TextStyle(
@@ -1298,8 +1300,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 65.0, middle: 0.6133),
-                        Pin(size: 18.0, end: -250.7),
+                        Pin(size: 63.0, middle: 0.6099),
+                        Pin(size: 20.0, end: -251.7),
                         child: Text(
                           '\$3,255.61',
                           style: TextStyle(
@@ -1311,8 +1313,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 74.0, middle: 0.6148),
-                        Pin(size: 18.0, end: -314.7),
+                        Pin(size: 68.0, middle: 0.6043),
+                        Pin(size: 20.0, end: -315.7),
                         child: Text(
                           '\$0.999912',
                           style: TextStyle(
@@ -1324,8 +1326,8 @@ class GooglePixel55 extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 59.0, middle: 0.6114),
-                        Pin(size: 18.0, end: -377.7),
+                        Pin(size: 52.0, middle: 0.5997),
+                        Pin(size: 20.0, end: -378.7),
                         child: Text(
                           '\$406.64',
                           style: TextStyle(
@@ -1338,7 +1340,7 @@ class GooglePixel55 extends StatelessWidget {
                       ),
                       Pinned.fromPins(
                         Pin(size: 36.0, middle: 0.6034),
-                        Pin(size: 18.0, end: -441.7),
+                        Pin(size: 20.0, end: -442.7),
                         child: Text(
                           '\$2.19',
                           style: TextStyle(
@@ -1409,20 +1411,20 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 37.0, start: 17.0),
-            Pin(size: 45.0, end: 20.0),
+            Pin(size: 31.0, start: 17.0),
+            Pin(size: 46.0, end: 19.0),
             child: PageLink(
               links: [
                 PageLinkInfo(
                   ease: Curves.easeIn,
                   duration: 0.8,
-                  pageBuilder: () => GooglePixel52(),
+                  pageBuilder: () => Home(),
                 ),
               ],
               child: Stack(
                 children: <Widget>[
                   Pinned.fromPins(
-                    Pin(start: 6.5, end: 6.4),
+                    Pin(size: 24.1, end: 0.4),
                     Pin(size: 22.5, start: 0.0),
                     child:
                         // Adobe XD layer: 'ic_account_balance_…' (shape)
@@ -1434,7 +1436,7 @@ class GooglePixel55 extends StatelessWidget {
                   ),
                   Pinned.fromPins(
                     Pin(start: 0.0, end: 0.0),
-                    Pin(size: 14.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
                     child: Text(
                       'Wallet',
                       style: TextStyle(
@@ -1451,12 +1453,12 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 41.0, middle: 0.3239),
-            Pin(size: 44.0, end: 20.0),
+            Pin(size: 35.0, middle: 0.3184),
+            Pin(size: 45.0, end: 19.0),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
-                  Pin(size: 21.0, middle: 0.5353),
+                  Pin(size: 21.0, end: 3.3),
                   Pin(size: 23.1, start: 0.0),
                   child: Stack(
                     children: <Widget>[
@@ -1498,7 +1500,7 @@ class GooglePixel55 extends StatelessWidget {
                 ),
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
+                  Pin(size: 16.0, end: 0.0),
                   child: Text(
                     'Market',
                     style: TextStyle(
@@ -1514,104 +1516,122 @@ class GooglePixel55 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 42.0, middle: 0.6097),
-            Pin(size: 45.0, end: 21.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 22.6, middle: 0.5009),
-                  Pin(size: 22.6, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_bubble_chart_24px' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(size: 9.0, start: 0.0),
-                        Pin(size: 9.0, end: 3.4),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 5.6, middle: 0.7333),
-                        Pin(size: 5.6, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 13.6, end: 0.0),
-                        Pin(size: 13.6, start: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Brower',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 35.0, middle: 0.5978),
+            Pin(size: 46.0, end: 20.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Browser(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 22.6, end: 2.7),
+                    Pin(size: 22.6, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_bubble_chart_24px' (group)
+                        Stack(
+                      children: <Widget>[
+                        Pinned.fromPins(
+                          Pin(size: 9.0, start: 0.0),
+                          Pin(size: 9.0, end: 3.4),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 5.6, middle: 0.7333),
+                          Pin(size: 5.6, end: 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 13.6, end: 0.0),
+                          Pin(size: 13.6, start: 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Brower',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 58.0, end: 19.0),
-            Pin(size: 46.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 23.0, middle: 0.513),
-                  Pin(size: 23.0, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_perm_identity_24…' (shape)
-                      SvgPicture.string(
-                    _svg_w45e8,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'My Profile',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 50.0, end: 27.0),
+            Pin(size: 47.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Profile(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 23.0, middle: 0.6649),
+                    Pin(size: 23.0, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_perm_identity_24…' (shape)
+                        SvgPicture.string(
+                      _svg_w45e8,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'My Profile',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class GooglePixel51 extends StatelessWidget {
-  GooglePixel51({
-    Key key,
+class App extends StatelessWidget {
+  App({
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class GooglePixel51 extends StatelessWidget {
                 Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/logo.png'),
                   fit: BoxFit.fill,
                 ),
               ),

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import './home.dart';
+import 'package:adobe_xd/page_link.dart';
+import './trades.dart';
+import './browser.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GooglePixel57 extends StatelessWidget {
-  GooglePixel57({
-    Key key,
+class Profile extends StatelessWidget {
+  Profile({
+    Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -30,176 +34,203 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 37.0, start: 17.0),
-            Pin(size: 45.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 6.5, end: 6.4),
-                  Pin(size: 22.5, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_account_balance_…' (shape)
-                      SvgPicture.string(
-                    _svg_ou3db5,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Wallet',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 31.0, start: 17.0),
+            Pin(size: 46.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Home(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 24.1, end: 0.4),
+                    Pin(size: 22.5, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_account_balance_…' (shape)
+                        SvgPicture.string(
+                      _svg_ou3db5,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Wallet',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 41.0, middle: 0.3239),
-            Pin(size: 44.0, end: 20.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 21.0, middle: 0.5353),
-                  Pin(size: 23.1, start: 0.0),
-                  child: Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, middle: 0.5),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_vj8xc5,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_vodbsd,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(size: 9.9, start: 0.0),
-                        child:
-                            // Adobe XD layer: 'ic_trending_up_24px' (shape)
-                            SvgPicture.string(
-                          _svg_oxe8,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Market',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
+            Pin(size: 35.0, middle: 0.3184),
+            Pin(size: 45.0, end: 19.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Trades(),
                 ),
               ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 21.0, end: 3.3),
+                    Pin(size: 23.1, start: 0.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, middle: 0.5),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_vj8xc5,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, end: 0.0),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_vodbsd,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(start: 0.0, end: 0.0),
+                          Pin(size: 9.9, start: 0.0),
+                          child:
+                              // Adobe XD layer: 'ic_trending_up_24px' (shape)
+                              SvgPicture.string(
+                            _svg_oxe8,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Market',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 42.0, middle: 0.6097),
-            Pin(size: 45.0, end: 21.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(size: 22.6, middle: 0.5009),
-                  Pin(size: 22.6, start: 0.0),
-                  child:
-                      // Adobe XD layer: 'ic_bubble_chart_24px' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(size: 9.0, start: 0.0),
-                        Pin(size: 9.0, end: 3.4),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 5.6, middle: 0.7333),
-                        Pin(size: 5.6, end: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 13.6, end: 0.0),
-                        Pin(size: 13.6, start: 0.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                                Radius.elliptical(9999.0, 9999.0)),
-                            border: Border.all(
-                                width: 3.0, color: const Color(0xff484848)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
-                  child: Text(
-                    'Brower',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: const Color(0xff484848),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 58.0, end: 19.0),
+            Pin(size: 35.0, middle: 0.5978),
             Pin(size: 46.0, end: 20.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.8,
+                  pageBuilder: () => Browser(),
+                ),
+              ],
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(size: 22.6, end: 2.7),
+                    Pin(size: 22.6, start: 0.0),
+                    child:
+                        // Adobe XD layer: 'ic_bubble_chart_24px' (group)
+                        Stack(
+                      children: <Widget>[
+                        Pinned.fromPins(
+                          Pin(size: 9.0, start: 0.0),
+                          Pin(size: 9.0, end: 3.4),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 5.6, middle: 0.7333),
+                          Pin(size: 5.6, end: 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 13.6, end: 0.0),
+                          Pin(size: 13.6, start: 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              border: Border.all(
+                                  width: 3.0, color: const Color(0xff484848)),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 16.0, end: 0.0),
+                    child: Text(
+                      'Brower',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 12,
+                        color: const Color(0xff484848),
+                        fontWeight: FontWeight.w300,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 50.0, end: 27.0),
+            Pin(size: 47.0, end: 19.0),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
-                  Pin(size: 23.0, middle: 0.513),
+                  Pin(size: 23.0, middle: 0.6649),
                   Pin(size: 23.0, start: 0.0),
                   child:
                       // Adobe XD layer: 'ic_perm_identity_24…' (shape)
@@ -211,7 +242,7 @@ class GooglePixel57 extends StatelessWidget {
                 ),
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(size: 14.0, end: 0.0),
+                  Pin(size: 16.0, end: 0.0),
                   child: Text(
                     'My Profile',
                     style: TextStyle(
@@ -292,8 +323,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 117.0, middle: 0.2464),
-            Pin(size: 14.0, start: 70.0),
+            Pin(size: 104.0, middle: 0.2353),
+            Pin(size: 16.0, start: 69.0),
             child: Text(
               'Manage your wallet',
               style: TextStyle(
@@ -305,8 +336,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 133.0, middle: 0.2731),
-            Pin(size: 14.0, middle: 0.4253),
+            Pin(size: 117.0, middle: 0.2572),
+            Pin(size: 16.0, middle: 0.4251),
             child: Text(
               'Support and feedback',
               style: TextStyle(
@@ -318,8 +349,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 76.0, middle: 0.224),
-            Pin(size: 14.0, middle: 0.4922),
+            Pin(size: 68.0, middle: 0.2185),
+            Pin(size: 16.0, middle: 0.4922),
             child: Text(
               'Terms of Use',
               style: TextStyle(
@@ -331,8 +362,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 55.0, middle: 0.2101),
-            Pin(size: 14.0, middle: 0.5591),
+            Pin(size: 49.0, middle: 0.2064),
+            Pin(size: 16.0, middle: 0.5593),
             child: Text(
               'About Us',
               style: TextStyle(
@@ -446,8 +477,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 82.0, middle: 0.2283),
-            Pin(size: 14.0, start: 143.0),
+            Pin(size: 73.0, middle: 0.2219),
+            Pin(size: 16.0, start: 142.0),
             child: Text(
               'Address Book',
               style: TextStyle(
@@ -470,8 +501,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 49.0, middle: 0.2064),
-            Pin(size: 14.0, middle: 0.2378),
+            Pin(size: 43.0, middle: 0.2029),
+            Pin(size: 16.0, middle: 0.2371),
             child: Text(
               'Settings',
               style: TextStyle(
@@ -494,8 +525,8 @@ class GooglePixel57 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 46.0, middle: 0.2046),
-            Pin(size: 14.0, middle: 0.3047),
+            Pin(size: 39.0, middle: 0.2006),
+            Pin(size: 16.0, middle: 0.3042),
             child: Text(
               'Explore',
               style: TextStyle(
